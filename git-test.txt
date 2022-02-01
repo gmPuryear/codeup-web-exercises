@@ -1,2 +1,3 @@
 hope this makes it to the cloud!
 Getting Git is legit
+This is a new line of text
