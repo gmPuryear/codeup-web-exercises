@@ -12,6 +12,7 @@ function sayHello(name) {
     return ("Hello " + name + "!");
 }
 
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -21,8 +22,6 @@ function sayHello(name) {
  */
 let helloMessage = sayHello("George");
 console.log(helloMessage);
-
-
 
 /**
  * TODO:
