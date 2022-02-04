@@ -18,7 +18,5 @@ function showName(username) {
 alert("Your username is: " + username);
 }
 
-let name = getName();
-console.log(name);
-showName(name);
+showName(getName());
 
