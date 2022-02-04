@@ -17,12 +17,12 @@ You have rented some movies for your kids: The little mermaid (for 3 days), Brot
 and Hercules (1 day, you don't know yet if they're going to like it). If price for a movie per day is $3, how much
 will you have to pay?
 */
-let pricePerMoviePerDay = Number(prompt("What is the price per day for one movie? "));
+let pricePerMoviePerDay = parseInt(prompt("What is the price per day for one movie? "));
 console.log(typeof pricePerMoviePerDay);
-let littleMermaidDays = Number(prompt("How many days did you rent Little Mermaid for? "));
+let littleMermaidDays = parseInt(prompt("How many days did you rent Little Mermaid for? "));
 console.log(typeof littleMermaidDays);
-let brotherBearDays = Number(prompt("How many days did you rent Brother Bear for? "));
-let herculesDays = Number(prompt("How many days did you rent Hercules for? "));
+let brotherBearDays = parseInt(prompt("How many days did you rent Brother Bear for? "));
+let herculesDays = parseInt(prompt("How many days did you rent Hercules for? "));
 let days = littleMermaidDays + brotherBearDays + herculesDays;
 let totalCost = pricePerMoviePerDay * days;
 alert("The total price is: $" + totalCost + ".");
@@ -33,9 +33,9 @@ they pay you a different rate per hour. Google pays $400, Amazon $380, and Faceb
 How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours
 for Amazon.
  */
-let facebookWeekPay = Number(prompt("How many hours did you work for Facebook this week? ")) * 300;
-let googWeekPay = Number(prompt("How many hours did you work for Google this week? ")) * 400;
-let amazonWeekPay = Number(prompt("How many hours did you work for Amazon this week? ")) * 380;
+let facebookWeekPay = parseInt(prompt("How many hours did you work for Facebook this week? ")) * 300;
+let googWeekPay = parseInt(prompt("How many hours did you work for Google this week? ")) * 400;
+let amazonWeekPay = parseInt(prompt("How many hours did you work for Amazon this week? ")) * 380;
 let totalWeekPay = facebookWeekPay + googWeekPay + amazonWeekPay;
 alert("Your pay for the week is $" + totalWeekPay + ".");
 
@@ -44,7 +44,7 @@ A student can be enrolled in a class only if the class is not full and the class
  her current schedule.
  */
  let classMaxStudents = 25;
- let currentClassSize = Number(prompt("How many students are currently signed up for the class?"));
+ let currentClassSize = parseInt(prompt("How many students are currently signed up for the class?"));
  let numberSeatsLeft = classMaxStudents - currentClassSize
 if (numberSeatsLeft === 0) {
     alert("The class is already full!");
