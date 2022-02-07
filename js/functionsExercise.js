@@ -20,8 +20,8 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello("George");
-console.log(helloMessage);
+let output = sayHello("George");
+console.log(output);
 
 /**
  * TODO:

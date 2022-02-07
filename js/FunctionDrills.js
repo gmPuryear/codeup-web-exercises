@@ -2,11 +2,11 @@
 Functions using conditionals but not loops or arrays:
 
 
-Make a function named isFalse(boolean)
-Make a function named isTruthy(input), remember that values other than true will behave like true
-Make a function named isFalsy(input), remember that values other than false behave like false
-Make a function named isVowel(letter)
-Make a function named isConsonant(letter)
+
+
+
+
+
 Make a function named isCapital(letter)
 Make a function named isLowerCase(letter)
 Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
@@ -144,17 +144,44 @@ Make a function named absoluteValue(number) that returns the absolute value of a
         return (bool === true) ? "It's true!!!" : "It's not true!!!";
     }
     console.log("isTrue: ", isTrue(true), '\n' + "isTrue: ", isTrue(false));
-    
 
+// Make a function named isFalse(boolean)
+    function isFalse(bool) {
+        return (bool === false) ? 'The isFalse input is FALSE!' : 'The isFalse input is NOT false!';
+    }
+    console.log('isFalse: ', isFalse(false), '\nisFalse: ', isFalse(true));
 
+// Make a function named isTruthy(input), remember that values other than true will behave like true
+    function isTruthy(input) {
+        return (input) ? "input is truthy" : "input is falsy";
+    }
+    console.log("isTruthy: ", isTruthy(2), "\nisTruthy: ", isTruthy(!!2));
 
+// Make a function named isFalsy(input), remember that values other than false behave like false
+    function isFalsy(input) {
+        if (input) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    console.log("isFalsy: ", isFalsy(""), "\nisFalsy: ", isFalsy(NaN));
 
+// Make a function named isVowel(letter)
+    function isVowel(letter) {
+        letter = letter.toLowerCase();
+        let result = letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u';
+        return result;
+    }
+    console.log("isVowel: " + isVowel("A") + "\nisVowel: " + isVowel("P"));
 
-
-
-
-
-
+// Make a function named isConsonant(letter)
+    function isConsonant(letter) {
+        letter = letter.toLowerCase();
+        let result = letter !== 'a' || letter !== 'e' || letter !== 'i' || letter !== 'o' || letter !== 'u';
+        return result;
+    }
+    console.log("isConsonant: " + isConsonant('p') + "\nisConsonant: " + isConsonant('o'));
 
 
 })();
