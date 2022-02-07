@@ -20,8 +20,8 @@
 function getToDestination(age, isInsured, hasCar) {
     if (age > 16 && isInsured && hasCar) {
         console.log("You can use your  own car!");
-    } else if (age <= 16 && canGetRideshare(true, true) && !isInsured || !hasCar) {
-        console.log("You CAN call up a raideshare service!");
+    } else if (age <= 16 && canGetRideshare(true, true) && (!isInsured || !hasCar)) {
+        console.log("You CAN call up a rideshare service!");
     } else {
         console.log("Call a friend to pick you up!");
     }
@@ -29,12 +29,13 @@ function getToDestination(age, isInsured, hasCar) {
 
 function canGetRideshare(driversNear, enoughMoney) {
     var result = driversNear && enoughMoney;
+    console.log(result);
     return result;
 }
 
-getToDestination(18, true, true,);
-getToDestination(15, false, false,);
-getToDestination(14, true, true);
+getToDestination(18, true, true);
+getToDestination(15, false, false);
+getToDestination(16, false, false);
 
 
 

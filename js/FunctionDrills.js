@@ -3,13 +3,6 @@ Functions using conditionals but not loops or arrays:
 
 
 
-
-
-
-
-Make a function named isCapital(letter)
-Make a function named isLowerCase(letter)
-Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
 Make a function named isSpace(letter) that returns if a character is a space character
 Make a function named isZero(number)
 Make a function named notZero(input) that returns true if the input is not zero
@@ -183,7 +176,31 @@ Make a function named absoluteValue(number) that returns the absolute value of a
     }
     console.log("isConsonant: " + isConsonant('p') + "\nisConsonant: " + isConsonant('o'));
 
+// Make a function named isCapital(letter)
+    function isCapital(letter){
+        let result = letter === letter.toUpperCase();
+        return result;
+    }
+    console.log('isCapital: ' + isCapital('A') + '\nisCapital: ' + isCapital('a'));
 
+// Make a function named isLowerCase(letter)
+    function isLowerCase(letter) {
+        result = letter.toLowerCase() === letter;
+        return result;
+    }
+    console.log("isLowerCase: " + isLowerCase('a') + "\nisLowerCase: " + isLowerCase("B"));
+
+// Make a function named hasLowerCase(string) that returns if a string has any lower cased letters
+    function hasLowerCase(string) {
+        for (var i = 0; i < string.length; i++) {
+           if (string[i] === string[i].toLowerCase()) {
+               return true
+           } else {
+               continue;
+           }
+        }
+    }
+    console.log("hasLowerCase: " + hasLowerCase('HELLO I'));
 })();
 
 
