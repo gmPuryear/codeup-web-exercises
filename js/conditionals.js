@@ -1,5 +1,7 @@
 // "use strict";
-//
+
+// ***To see the individual solutions that I have, uncomment the functions and associated parts***
+
 //  // * TODO:
 //  // * Create a function named `analyzeColor` that accepts a string that is a color
 //  // * name as input. This function should return a message which relates to the
@@ -17,6 +19,7 @@
 //  //
 //  // * Test your function by passing various string literals to it and
 //  // * console.logging the function's return value
+
 // // function analyzeColor(inputColor) {
 // //     inputColor = inputColor.toLowerCase();
 // //     if (inputColor === "blue") {
@@ -38,8 +41,9 @@
 // // console.log(analyzeColor("Green"));
 // // console.log(analyzeColor("Purple"));
 // // console.log(analyzeColor("Gray"));
-//
-// // Don't change the next two lines!
+
+
+// // Do not change the next two lines!
 // // These lines create two variables for you:
 // // - `colors`: a list of the colors of the rainbow
 // // - `randomColor`: contains a single random color value from the list (this
@@ -47,16 +51,19 @@
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // /**
+
 //  * TODO:
 //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 //  * You should see a different message every time you refresh the page
 //  */
+
 // console.log(analyzeColor(randomColor));
 //
 // /**
 //  * TODO:
 //  * Comment out the code above, and refactor your function to use a switch-case statement
 //  */
+
 // var colorSwitchStatement = randomColor.toLowerCase();
 // function analyzeColor(color) {
 //     switch (color) {
@@ -84,7 +91,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //  * user to your `analyzeColor` function. Alert the return value from your
 //  * function to show it to the user.
 //  */
-// console.log(alert(analyzeColor(prompt("What color do you pick?"))));
+
+// alert(analyzeColor(prompt("What color do you pick?")));
 
 // /* ########################################################################## */
 //
@@ -146,8 +154,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-// alert(calculateTotal(luckyNumber, prompt("What is your total?")));
 //
+// alert(calculateTotal(luckyNumber, prompt("What is your total?")));
+
 // /**
 //  * TODO:
 //  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -195,8 +204,5 @@ function custEntersNum(num) {
 }
 
 executeChoice();
-
-
-// let EnterNumber = custEntersNum(prompt("Please enter a number"));
 
 
