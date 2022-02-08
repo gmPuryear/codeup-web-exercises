@@ -27,3 +27,4 @@ function areIdentical(input1, input2) {
     }
 }
 console.log(areIdentical(1, 1));
+

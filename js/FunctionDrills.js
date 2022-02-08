@@ -194,13 +194,14 @@ Make a function named absoluteValue(number) that returns the absolute value of a
     function hasLowerCase(string) {
         for (var i = 0; i < string.length; i++) {
            if (string[i] === string[i].toLowerCase()) {
-               return true
+               return true;
            } else {
                continue;
            }
         }
+        return false;
     }
-    console.log("hasLowerCase: " + hasLowerCase('HELLO I'));
+    console.log("hasLowerCase: " + hasLowerCase('HELLo') + "\nhasLowerCase: " + hasLowerCase('HELLO'));
 })();
 
 
