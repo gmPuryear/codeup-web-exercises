@@ -26,11 +26,13 @@
 //         console.log(space += j);
 //     }
 // }
-for (var i = 1; i <= 9; i++) {
-    for (var j = 1; j <= i; j++) {
-        console.log();
-    }
-}
+
+// for (var i = 1; i <= 9; i++) {
+//     for (var j = i; j <= i; j++) {
+//         var str = "" + j;
+//         console.log(str.repeat(j));
+//     }
+// }
 
 
 // for (var i = 100; i >= 5; i -= 5) {
