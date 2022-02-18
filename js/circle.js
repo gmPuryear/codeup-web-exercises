@@ -14,7 +14,7 @@
         logInfo: function (doRounding) {
             // TODO: complete this method.
             // If doRounding is true, round the result to the nearest integer.
-            if (doRounding === true) {
+            if (doRounding) {
                 console.log(Math.round(this.getArea()));
             } else {
                 // Otherwise, output the complete value

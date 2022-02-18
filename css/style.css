@@ -1,0 +1,39 @@
+body {
+    background-image: url("../images/cool-background.png");
+    font-family: Arial;
+}
+
+.fancy-header {
+    color: #70F11C;
+}
+
+header h1 {
+    text-align: center;
+}
+
+h3 {
+    color: #06C3F5
+}
+.processOl li {
+    list-style-type: upper-roman;
+}
+
+li {
+    list-style-type: square;
+}
+
+tr {
+    padding: 2px;
+    font-size: 1em;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: chartreuse;
+}
+
