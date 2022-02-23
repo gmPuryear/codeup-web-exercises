@@ -63,6 +63,11 @@ fieldset {
     border: 1px lightgray solid;
     background-color: #0fb784;
 }
+.btn:hover {
+    -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
 
 .form-control {
     /* There must be 4px on top of the text and below the text of an input with this class */
@@ -74,8 +79,7 @@ fieldset {
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: calc();
-    width: 100%;
+    width: calc(100% - 4px);
 }
 
 

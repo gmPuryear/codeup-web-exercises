@@ -5,14 +5,17 @@ body {
 
 .fancy-header {
     color: #70F11C;
-}
-
-header h1 {
     text-align: center;
 }
 
-h3 {
-    color: #06C3F5
+header h1 {
+
+}
+
+h1, h3 {
+    color: #06C3F5;
+    text-decoration: underline;
+
 }
 .processOl li {
     list-style-type: upper-roman;
@@ -21,7 +24,10 @@ h3 {
 li {
     list-style-type: square;
 }
-
+table {
+    background-color: rgba(150, 0, 0, 0.25);
+    border: 2px black solid;
+}
 tr {
     padding: 2px;
     font-size: 1em;

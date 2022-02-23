@@ -153,14 +153,34 @@
 
 // WarmUp 2/18/22
 // Create a function which returns true if the given argument is a number, false if it is not a number
-function isNumber(input) {
-    if (!isNaN(input) || typeof input === "number")  {
-        return true;
-    } else {
-        return false;
-    }
+// function isNumber(input) {
+//     if (!isNaN(input) || typeof input === "number")  {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(isNumber(5));
+// console.log(isNumber('5'));
+// console.log(isNumber('NaN'));
+// console.log(isNumber('sgsdgd asas'));
+
+let myTable = {
+    height: 75,
+    width: 120,
+    length: 60,
+    color: 'white'
+};
+
+myTable.area = function() {
+    console.log(this.length * this.width);
 }
-console.log(isNumber(5));
-console.log(isNumber('5'));
-console.log(isNumber('NaN'));
-console.log(isNumber('sgsdgd asas'));
+myTable.area();
+
+// constructor
+const Table = function(height, width, length, color) {
+    this.height = height;
+    this.width = width;
+    this.length = length;
+    this.color = color;
+}
