@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <title>github</title>
     <link rel="stylesheet" href="../css/github.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 <body>
 <header>
-    <div>
-        <a href="#" id="logo"><img src="images/GitHub-Mark.png" alt="github avatar"></a>
-    </div>
-    <nav>
+    <a href="#" id="logo"><img src="https://img.icons8.com/windows/40/000000/github.png" alt="github logo"/></a>
+    <nav class="upper_nav_bar">
         <ul>
-            <li><a href="#">Pull Requests</a></li>
+            <li><a href="#">Pull requests</a></li>
             <li><a href="#">Issues</a></li>
             <li><a href="#">Marketplace</a></li>
             <li><a href="#">Explore</a></li>
@@ -20,65 +19,71 @@
     </nav>
 </header>
 <main>
-    <section>
-        <img src="images/CodeupFullColorChevronYT.png" alt="codeup chevron">
-        <div>
-            <strong>Codeup</strong>
-        </div>
-    </section>
-    <nav>
-        <ul>
-            <li><a href="#">Repositories</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Teams</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-    </nav>
-    <article>
+    <div class="above_table">
+        <section class="codeUp">
+            <img id="codeupChevron" src="images/CodeupFullColorChevronYT.png" alt="codeup chevron">
+            <div>
+                <strong>Codeup</strong>
+            </div>
+        </section>
+        <nav class="nav_yup">
+            <ul class="codeup_page_links">
+                <a href="#">
+                    <li>Repositories</li>
+                </a>
+                <a href="#">
+                    <li>People</li>
+                </a>
+                <a href="#">
+                    <li>Teams</li>
+                </a>
+                <a href="#">
+                    <li>Projects</li>
+                </a>
+                <a href="#">
+                    <li>Settings</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+    <article class="info_section">
         <table>
-            <th>Codeup's dev team</th>
+            <th id="th_row">Codeup's dev team</th>
             <tr>
                 <td>
+                    <img width="5%" src="https://fer-uig.glitch.me" alt="user-icon"/>
                     <div>
-                        <img src="https://fer-uig.glitch.me" alt="user-icon"/>
+                        <p class="name"><a href="#"> Kent Beck</a></p>
+                        <p class="title">KentBeck</p>
                     </div>
                     <div>
-                        <p>Kent Beck</p>
-                        <p>KentBeck</p>
-                    </div>
-                    <div>
-                        <p>Member</p>
-                        <p>team</p>
+                        <p class="member">Member</p>
+                        <p class="team">1 team</p>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
+                    <img width="5%" src="https://fer-uig.glitch.me?uuid=1" alt="user-icon"/>
                     <div>
-                        <img src="https://fer-uig.glitch.me?uuid=1" alt="user-icon"/>
+                        <p class="name"><a href="#">Codeup Instruction Staff</a></p>
+                        <p class="title">CodeupInstructors</p>
                     </div>
                     <div>
-                        <p>Codeup Instruction Staff</p>
-                        <p>CodeupInstructors</p>
-                    </div>
-                    <div>
-                        <p>Member</p>
-                        <p>team</p>
+                        <p class="member">Member</p>
+                        <p class="team">1 team</p>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div>
-                        <img src="https://fer-uig.glitch.me?uuid=777" alt="user-icon"/>
+                    <img width="5%" src="https://fer-uig.glitch.me?uuid=777" alt="user-icon"/>
+                    <div id="name_only">
+                        <p><a href="#"> Martin Fowler</a></p>
                     </div>
                     <div>
-                        <p>Martin Fowler</p>
-                    </div>
-                    <div>
-                        <p>Member</p>
-                        <p>teams</p>
+                        <p class="member">Member</p>
+                        <p class="team">0 teams</p>
                     </div>
                 </td>
             </tr>
