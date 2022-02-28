@@ -165,22 +165,33 @@
 // console.log(isNumber('NaN'));
 // console.log(isNumber('sgsdgd asas'));
 
-let myTable = {
-    height: 75,
-    width: 120,
-    length: 60,
-    color: 'white'
-};
+// let myTable = {
+//     height: 75,
+//     width: 120,
+//     length: 60,
+//     color: 'white'
+// };
+//
+// myTable.area = function() {
+//     console.log(this.length * this.width);
+// }
+// myTable.area();
+//
+// // constructor
+// const Table = function(height, width, length, color) {
+//     this.height = height;
+//     this.width = width;
+//     this.length = length;
+//     this.color = color;
+// }
 
-myTable.area = function() {
-    console.log(this.length * this.width);
-}
-myTable.area();
+// Warmup 2/28/22
+// Warmup: Write a function called removeAll that takes two parameters. One that represents
+// an array and another that represents a value to be removed from that array. When called this function should return
+// an array with all the values of the original array except the specified value to be removed.
 
-// constructor
-const Table = function(height, width, length, color) {
-    this.height = height;
-    this.width = width;
-    this.length = length;
-    this.color = color;
-}
+// function removeAll(arr, value) {
+//     arr.splice(value, 1);
+//     return arr;
+// }
+// console.log(removeAll(['a','b','y','f','0'], 2));
