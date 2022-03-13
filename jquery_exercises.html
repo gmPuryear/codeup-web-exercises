@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery_exercises</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p> please type into form</p>
+<form>
+    <input type="text" id="textfield" name="textfield" placeholder="type here"/>
+</form>
+
+
+
+<!--<h1 id="header1" class="codeup">Hello</h1>-->
+<!--<div class="codeup">-->
+<!--    <p id="gibberish" class="text">-->
+<!--        orem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus fugit quam. Accusantium ad animi,-->
+<!--        dolore doloremque ea esse eveniet iste omnis optio qui quod similique suscipit vel velit voluptatem!-->
+<!--    </p>-->
+
+<!--    <ul id="ul">-->
+<!--        <li class="codeup">option1</li>-->
+<!--        <li class="lis text">option2</li>-->
+<!--        <li class="lis text">option3</li>-->
+<!--        <li class="lis text">option4</li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash;<h1 id="codeup">Hello Codeup</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<input type="text" placeholder="text here">&ndash;&gt;-->
+<!--&lt;!&ndash;<h1> Example Page</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="important">&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>This is an important message!</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class = "not important">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h2>Lorem Ipsum</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>&ndash;&gt;-->
+<!--&lt;!&ndash;        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur dolores eaque minus nemo quidem ut. A adipisci beatae deserunt maiores mollitia nam sed, veniam? Atque debitis molestiae pariatur quis!&ndash;&gt;-->
+<!--&lt;!&ndash;    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<p class = "important">This is also very important</p>-->
+
+
+<script>
+    'use strict'
+    // $('#textfield').keydown(function() {
+    //     alert('a key was pushed!');
+    // });
+    // $('#textfield').keydown(function() {
+    //     alert('A key was pushed down!');
+    // });
+
+    $('#textfield').keyup(function(e) {
+        alert('its been pressed');
+    });
+
+
+// $('li').hover(function() {
+//     $(this).css('color', 'white');
+//     $(this).css('background-color', 'red');
+// }, function () {
+//     var orginalBcg = $(this).css('background-color', 'black');
+//     $(this).css('background-color', orginalBcg);
+// });
+//
+//     $('p').dblclick(function () {
+//         $(this).css('font-size', '18px');
+//     });
+//
+//     $('h1').click(function () {
+//         $(this).css('background-color', 'blue');
+//     });
+    // $('#codeup').hover(
+    //     function () { // Start of Hover parameter 1
+    //         $(this).css('background-color', '#FF0'); // Hover parameter 1
+    //     } /* End of over parameter 1*/,
+    //     function () { // Start of Hover parameter 2
+    //         $(this).css('background-color', '#FFF'); // Hover parameter 2
+    //     }); //End of over parameter 1
+    // $('#codeup').dblclick(function () {
+    //     alert('What the last one said');
+    // })
+    // $('#codeup').click(function () {
+    //     alert('h1 with id "codeup" was clicked');
+    // })
+
+    // $('li').css('font-size', '20px');
+    // $('h1, p, li').css('background-color', 'red')
+    // var headerElementContents = $('h1').html();
+    // alert(headerElementContents);
+
+    // $('.codeup').css('border', 'red 1px solid');
+
+    // var headerHTMLContent = $('#header1').html();
+    // alert(headerHTMLContent);
+    // var ulContent = $('#ul').html();
+    // alert(ulContent);
+    // $(document).ready(function() {
+    //     alert("DOM has loadded!");
+    // })
+    // asigns the html content using $ alias and the .html property  to (hello codeup) that goes with the codup id
+    // var contents = $('#codeup').html();
+    //     alert(contents); // Tells user that the h1 content is "hello codeup"
+
+    // $('.important').css('background-color', 'yellow');
+    // $('p').css('font-size', '14px');
+    // $('.important, p').css('background-color', 'yellow');
+    // $('*').css('border', '1px solid #f00');
+</script>
+
+</body>
+</html>
