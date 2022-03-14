@@ -34,12 +34,17 @@ $(document).ready(function () {
     // text inside #user-output;
 
     let valueIn = '';
-    // 1. get element
-    $('#user-input').keypress(function (e) {
-        valueIn += (e.key);
-        console.log(valueIn);
-        $("#user-output").html(valueIn);
-    });
+    // 1. Select element
+    // $('#user-input').keypress(function (e) {
+    //     valueIn += (e.key);
+    //     console.log(valueIn);
+    //     $("#user-output").html(valueIn);
+    // });
+    $('#user-input').keyup(function () {
+        let txtValue = (this).value;
+        console.log(txtValue);
+        $('#user-output').text(txtValue);
+    })
 
 
 
