@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000805;
+            box-sizing: border-box;
+        }
+        #logo > h1 {
+            margin: 0;
+        }
+
+        nav {
+            height: 40px;
+        }
+
+        #ribbon {
+            display: flex;
+            background-color: #E33E33;
+            width: 100%;
+            justify-content: center;
+        }
+
+        #jokeOfDay {
+            display: flex;
+            justify-content: center;
+            background-color: #E33E33;
+            margin: auto;
+            width: 50%;
+        }
+        #container {
+            padding-top: 200px;
+            min-height: 100%;
+            min-width: 100%;
+        }
+
+        #jokeOfDay > h5 {
+            margin: 0;
+            padding: 20px 20px 10px 20px;
+        }
+
+        #btnDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="ribbon">
+    <div id="logo"><h1>Chuck Norris Jokes!</h1></div>
+</div>
+
+
+<div id="container">
+    <div id="jokeOfDay">
+        <h5></h5>
+    </div>
+    <div id="btnDiv">
+        <button id="changeJokeBtn">New Joke</button>
+    </div>
+</div>
+
+<script src="js/keys.js"></script>
+<script>
+
+    const options = {
+        method: 'GET',
+        url: 'https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/search',
+        params: {query: 'food'},
+        headers: {
+            accept: 'application/json',
+            'x-rapidapi-key': 'cJvLRNK0GfdM9WSMbQe3inU7REn8JVy5',
+            'x-rapidapi-host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
+        }
+    };
+    axios.request(options).then(function (response) {
+        var ChuckNorrisData = response;
+        // console.log(ChuckNorrisData);
+        var ChuckNorrisArrayOfJokes = ChuckNorrisData.data.result;
+        let randomJoke = Math.floor(Math.random() * (ChuckNorrisArrayOfJokes.length + 1));
+        $('#jokeOfDay > h5').html(ChuckNorrisArrayOfJokes[randomJoke].value);
+        // console.log(ChuckNorrisArrayOfJokes[0].value);
+        $('#changeJokeBtn').click(function () {
+            let randomValue = Math.floor(Math.random() * (ChuckNorrisArrayOfJokes.length + 1));
+            $('#jokeOfDay > h5').html(ChuckNorrisArrayOfJokes[randomValue].value);
+        })
+
+
+    })
+        .catch(function (error) {
+            console.error(error);
+        });
+
+
+    // fetch("https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&units=imperial&appid=" + OWM_KEY)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data.daily)
+    //         let html = '';
+    //         html+= '<ul>'
+    //         for (let i = 0; i < 5; i++) {
+    //             let dailyTemp = data.daily[i].temp.day
+    //             html+= '<li>' + dailyTemp + '</li>';
+    //         }
+    //         html += '</ul>';
+    //         $('#weather').html(html);
+    //     });
+
+
+</script>
+</body>
+</html>
