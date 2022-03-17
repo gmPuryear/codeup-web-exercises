@@ -12,6 +12,7 @@
             background-color: #000805;
             box-sizing: border-box;
         }
+
         #logo > h1 {
             margin: 0;
         }
@@ -22,25 +23,27 @@
 
         #ribbon {
             display: flex;
+            margin-top: 20px;
             background-color: #E33E33;
             width: 100%;
             justify-content: center;
         }
 
-        #jokeOfDay {
+        #joke {
             display: flex;
             justify-content: center;
             background-color: #E33E33;
             margin: auto;
             width: 50%;
         }
+
         #container {
-            padding-top: 200px;
+            padding-top: 150px;
             min-height: 100%;
             min-width: 100%;
         }
 
-        #jokeOfDay > h5 {
+        #joke > h5 {
             margin: 0;
             padding: 20px 20px 10px 20px;
         }
@@ -49,7 +52,15 @@
             display: flex;
             justify-content: center;
         }
-
+        #thankYou {
+            width: 268px;
+        }
+        #images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+        }
     </style>
 
 </head>
@@ -61,13 +72,20 @@
 
 
 <div id="container">
-    <div id="jokeOfDay">
+    <div id="joke">
         <h5></h5>
     </div>
     <div id="btnDiv">
         <button id="changeJokeBtn">New Joke</button>
     </div>
+    <div id="images">
+        <img id = "thankYou" src="https://c.tenor.com/j7Ktllo_zXMAAAAC/peter-lafleur-dodgeball.gif" alt="Thank you chuck norris gif">
+        <img id= "thumbsUp" src="https://media1.giphy.com/media/BIuuwHRNKs15C/200.gif" alt="">
+    </div>
 </div>
+
+
+
 
 <script src="js/keys.js"></script>
 <script>
@@ -84,14 +102,13 @@
     };
     axios.request(options).then(function (response) {
         var ChuckNorrisData = response;
-        // console.log(ChuckNorrisData);
         var ChuckNorrisArrayOfJokes = ChuckNorrisData.data.result;
         let randomJoke = Math.floor(Math.random() * (ChuckNorrisArrayOfJokes.length + 1));
-        $('#jokeOfDay > h5').html(ChuckNorrisArrayOfJokes[randomJoke].value);
+        $('#joke > h5').html(ChuckNorrisArrayOfJokes[randomJoke].value);
         // console.log(ChuckNorrisArrayOfJokes[0].value);
         $('#changeJokeBtn').click(function () {
             let randomValue = Math.floor(Math.random() * (ChuckNorrisArrayOfJokes.length + 1));
-            $('#jokeOfDay > h5').html(ChuckNorrisArrayOfJokes[randomValue].value);
+            $('#joke > h5').html(ChuckNorrisArrayOfJokes[randomValue].value);
         })
 
 
