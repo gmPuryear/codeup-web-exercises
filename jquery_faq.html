@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery_faq</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <style>
+
+        .invisible {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<!--TODO:-->
+<!--Create a new file named jquery_faq.html. Commit all changes to GitHub.-->
+
+<!--In a HTML structure, create a definition list containing 10 FAQs about national parks.-->
+
+<!--Add a class to all dd elements named invisible.-->
+
+<!--Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
+
+<!--Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+
+<!--Bonus-->
+
+<!--When any of the dt elements is clicked, the element that was clicked should be highlighted.-->
+
+<!--Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.-->
+
+<!--Create a button that, when clicked, makes the last li in each ul have a yellow background.-->
+
+<!--When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.-->
+
+<!--When any list item is clicked, first li of the parent ul should have a font color of blue.-->
+<!--Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame. Use the traversing functions of jQuery to accomplish this.-->
+
+<!--The rules are the following:-->
+<!--The left frame swaps to the right and takes the image from the frame in the center.-->
+<!--The center frame swaps randomly to either the left or right.-->
+<!--The right frame swaps to the left and takes the image from the frame in the center.-->
+
+<dl>
+    <dt>Fact 1</dt>
+    <dd>This is fact number 1</dd>
+    <dt>Fact 2</dt>
+    <dd>This is fact number 2</dd>
+    <dt>Fact 3</dt>
+    <dd>This is fact number 3</dd>
+    <dt>Fact 4</dt>
+    <dd>This is fact number 4</dd>
+    <dt>Fact 5</dt>
+    <dd>This is fact number 5</dd>
+    <dt>Fact 6</dt>
+    <dd>This is fact number 6</dd>
+</dl>
+<ul>
+    <h3>Park 1</h3>
+    <li>Park 1 Fact 1</li>
+    <li>Park 1 Fact 2</li>
+    <li>Park 1 Fact 3</li>
+    <li>Park 1 Fact 4</li>
+</ul>
+<ul>
+    <h3>Park 2</h3>
+    <li>Park 2 Fact 1</li>
+    <li>Park 2 Fact 2</li>
+    <li>Park 2 Fact 3</li>
+    <li>Park 2 Fact 4</li>
+</ul>
+<ul>
+    <h3>Park 3</h3>
+    <li>Park 3 Fact 1</li>
+    <li>Park 3 Fact 2</li>
+    <li>Park 3 Fact 3</li>
+    <li>Park 3 Fact 4</li>
+</ul>
+<button id="HighLightbtn">Highlight</button>
+
+<script>
+    $('dl').after("<button id='hide'>Press To Hide dds</button>");
+
+    $('#hide').click(function () {
+        $('dd').toggleClass('invisible');
+    })
+
+    $('ul:last-child').after('<button>');
+
+    $('#HighLightbtn').click(function () {
+        $('ul').each(function () {
+            $(this).children().last().css('background-color', 'yellow')
+        });
+    });
+
+    $('h3').click(function() {
+        $('ul').each(function () {
+            $(this).children().css('font-weight', 'bold');
+        })
+    });
+
+    $('li').click(function () {
+        $(this).parent().children().first().css('key')
+    })
+
+
+    //Need to use 'each' to cycle through the ULs then in function use .last();
+    //When using .last(), .start(). make sure to use .children if need by to go through them
+    // .get can get a jquery object
+
+</script>
+</body>
+</html>
