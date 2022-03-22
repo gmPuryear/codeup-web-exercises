@@ -45,9 +45,8 @@ function scrubData(dailyData, day) {
     }
 }
 
-function formatDate(unixDate) {
-    var date = new Date(unixDate*1000);
-    return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear();
+function formatDate(date) {
+    return new Date(date * 1000).toISOString().split('T')[0];
 }
 
 function cardContent(unscrubData) {
@@ -55,7 +54,6 @@ function cardContent(unscrubData) {
     for (let i = 0; i < 5; i++) {
         let day = i;
         let scrubbedData = scrubData(unscrubData, day);
-        // console.log(scrubbedData);
         buildCard(scrubbedData, day);
     }
 }

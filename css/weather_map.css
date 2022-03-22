@@ -27,11 +27,20 @@ body {
     display: none;
 }
 
-#Logo4 {
+#logo4Small {
+    width: 150px;
+}
+
+#logo4Big {
     width: 175px;
 }
 
-#ribbon {
+#ribbonBig {
+    background-color: rgb(4, 1, 40);
+    height: 45px;
+}
+
+#ribbonSmall {
     background-color: rgb(4, 1, 40);
     height: 45px;
 }
@@ -55,17 +64,45 @@ h4 {
     padding-bottom: 20px;
 }
 
-footer {
+footer div {
+    color: rgb(219, 147, 45);
+    font-size: 20px;
+}
+
+#largeFooter {
+    /*height: 60px;*/
     background-color: rgb(4, 1, 40);
 }
+#largeFooter > a {
+    text-decoration: none;
+    color: rgb(219, 147, 45);
+    font-size: 20px;
+}
+#smallFooter {
+    background-color: rgb(4, 1, 40);
+}
+#smallFooter > a {
+    text-decoration: none;
+    color: rgb(219, 147, 45);
+    font-size: 14px;
+}
+
 #smallLogoText {
     font-size: 24px;
 }
 
-#ribbon > div > a {
+#ribbonSmall > div > a {
+    color: rgb(219, 147, 45);
+    font-size: 40px;
+    font-family: 'Marck Script', cursive;
+}
+#ribbonBig {
     color: rgb(219, 147, 45);
     font-size: 64px;
     font-family: 'Marck Script', cursive;
 }
+
+
+
 
 
