@@ -1,6 +1,6 @@
 "use strict";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ3B1cnllYXIiLCJhIjoiY2wwdXpnd2FzMHNpdDNqcDd4OWkxYWR6aSJ9.cbZfUVj2YSfaE-19G2xefw';
+mapboxgl.accessToken = MAPBOX;
 
 // creates map and adds to page
 const coordinates = document.getElementById('coordinates');

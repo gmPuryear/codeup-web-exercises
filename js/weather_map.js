@@ -17,7 +17,7 @@ getWeatherData(startLat, startLon);
 
 // fetch uses the weather URL as a parameter
 function getWeatherData(lat, lon) {
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&&appid=74f2096fa0dd49a40def83a89e6f7eb2`)
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&&appid=${OWM_KEY}`)
         .then((response) => { //function that takes in response data as parameter then turns it into readable JSON
             return response.json();
         })
