@@ -44,16 +44,16 @@
     </div>
 </div>
 
+<div id="geocodeWrapper">
+    <div id="geocoder" class="geocoder  mx-auto"></div>
+</div>
 <!--Weather Map only visible on larger screens-->
-<div class="container mx-auto">
-    <div id="geocodeWrapper">
-        <div id="geocoder" class="geocoder d-none d-lg-block mx-auto"></div>
-    </div>
-    <!--<button id="toggleTerain">Terrain Map</button>-->
-    <div id="map" class="row d-none d-lg-block col mx-auto d-inline-flex"></div>
+<div class="container d-flex justify-content-center">
+
+    <div id="map" class="row col mx-auto d-inline-flex"></div>
     <pre id="coordinates" class="coordinates"></pre>
 </div>
-
+#map > div.mapboxgl-control-container > div.mapboxgl-ctrl-top-right > div
 <!-- Scripts -->
 <script src="js/keys.js"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
