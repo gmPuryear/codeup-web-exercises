@@ -223,18 +223,54 @@
 // For n = 3, the output should be
 // solution(n) = 13.
 // SOLUTION:
-const solution = (n) => {
-    // figure out pattern vv
-//               (n-1)^2  | n^2
-// n = 1; area: 1 = 0 + 1
-// n = 2; area: 5 = 1 + 4
-// n = 3; area: 13 = 4 + 9
-// n = 4; area: 25 = 9 + 16
-    // this returns the area of the given polygon
-    return Math.pow(n-1, 2) + Math.pow(n, 2)
-}
+// const solution = (n) => {
+//     // figure out pattern vv
+// //               (n-1)^2  | n^2
+// // n = 1; area: 1 = 0 + 1
+// // n = 2; area: 5 = 1 + 4
+// // n = 3; area: 13 = 4 + 9
+// // n = 4; area: 25 = 9 + 16
+//     // this returns the area of the given polygon
+//     return Math.pow(n-1, 2) + Math.pow(n, 2)
+// }
+//
+// console.log(solution(3)) // expected: 13
 
-console.log(solution(3)) // expected: 13
+// TODO: Ratiorg got statues of different sizes as a present from CodeMaster for his birthday, each statue having an
+//  non-negative integer size. Since he likes to make things perfect, he wants to arrange them from smallest to
+//  largest so that each statue will be bigger than the previous one exactly by 1. He may need some additional
+//  statues to be able to accomplish that. Help him figure out the minimum number of additional statues needed.
+// Example:
+// For statues = [6, 2, 3, 8], the output should be
+// solution(statues) = 3.
+// Ratiorg needs statues of sizes 4, 5 and 7.
+// const solution = (statues) => {
+//     let additionalStatues = 0;
+//     // sort from lowest to highest number
+//     // starting from first element, if next element is not the next number, then add one to required statues
+//     // if it does exist, go to next iteration
+//     // starting at [0], if current element + 1 does not equal the value of current element + 1, add to counter
+//     statues.sort((a, b) => a -b ); // sorting statues numerically ascending
+//     console.log(statues);
+//     for (let i = 0; i < statues.length - 1; i++) {
+//         if (statues.length === 0) { // if array has only one element, then there does not to be anymore statues
+//             return 0;
+//         }
+//         if(statues[i + 1] !== statues[i] + 1) { // if the next element in array does not have the next number, then
+//             // get the number by subtracting the next element by the current one.
+//             additionalStatues += (statues[i + 1] - statues[i]) - 1;
+//         } else {
+//             continue;
+//         }
+//     }
+//     return additionalStatues;
+// }
+// console.log(solution([6, 2, 3, 8])); // expected: 3 more statues needed
+// console.log(solution([5, 4, 6])); // expected: 0 more needed
+// console.log(solution([0, 3])); // expected: 2 more needed
+// console.log(solution([6, 3])); // expected: 2 more needed
+// console.log(solution([5, 4, 6])); // expected: 0 more needed
+
 
 
 
