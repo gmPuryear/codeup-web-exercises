@@ -196,6 +196,23 @@
 // console.log(solution('aabaa'))
 // console.log(solution('abac'))
 
+// // TODO: Given an array of integers, find the pair of adjacent elements that has the largest product and return that
+// //  product.
+// const solution = (inputArray) => {
+//     // highest product is set first set to the first 2 elements
+//     let currentHighest = inputArray[0] * inputArray[1];
+//     let currentIteration;
+//     // go through array multiplying current element with previous element and comparing their product to the current highest
+//     for (let i = 1; i < inputArray.length; i++) {
+//         let currentIteration = inputArray[i] * inputArray[i - 1];
+//         if (currentIteration > currentHighest) {
+//             currentHighest = currentIteration
+//         }
+//     }
+//     return currentHighest;
+// }
+// console.log(solution([3, 6, -2, -5, 7, 3]));
+
 
 
 
