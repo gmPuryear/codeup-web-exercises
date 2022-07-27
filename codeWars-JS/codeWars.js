@@ -174,6 +174,31 @@
 // }
 
 // console.log(Solution(2000));
+// Solution 2:
+// function solution(year) {
+//     return Math.ceil(year / 100)
+// }
+
+// TODO: Given the string, check if it is a palindrome.
+// SOLUTION:
+// const solution = (inputString) => {
+//     // empty string that will store the reversed string that will be compared to the input string
+//     let reversedString = "";
+//     // loops through the input string starting at back of input to front
+//     for (let i = inputString.length - 1; i >= 0; i--) {
+//         // adding the looped thourgh values to the reversed string
+//         reversedString += inputString[i];
+//     }
+//     // if the reversed string matches the input then true, else false
+//     return (reversedString === inputString ? true : false)
+// }
+//
+// console.log(solution('aabaa'))
+// console.log(solution('abac'))
+
+
+
+
 
 
 
