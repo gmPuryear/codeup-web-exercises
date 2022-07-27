@@ -100,26 +100,84 @@
 // 3. If else statements to check what character is present
 // 4. based on what that character is, push its compliment to array
 
-console.log(DNAStrand('AAAA'))
-console.log(DNAStrand('ATTGC'))
-console.log(DNAStrand('GTAT'))
+// console.log(DNAStrand('AAAA'))
+// // console.log(DNAStrand('ATTGC'))
+// // console.log(DNAStrand('GTAT'))
+// //
+// // function DNAStrand(dna) {
+// //     let complimentArr = [];
+// //     for (let i = 0; i < dna.length; i++) {
+// //         // console.log(dna[i]);
+// //         if (dna[i] === 'A') {
+// //             complimentArr.push("T")
+// //         } else if (dna[i] === 'C') {
+// //             complimentArr.push("G");
+// //         } else if (dna[i] === "T") {
+// //             complimentArr.push('A')
+// //         } else if (dna[i] === "G") {
+// //             complimentArr.push("C");
+// //         }
+// //     }
+// //     let complimentArr2 = complimentArr.join('');
+// //     return complimentArr2;
+// // }
 
-function DNAStrand(dna) {
-    let complimentArr = [];
-    for (let i = 0; i < dna.length; i++) {
-        // console.log(dna[i]);
-        if (dna[i] === 'A') {
-            complimentArr.push("T")
-        } else if (dna[i] === 'C') {
-            complimentArr.push("G");
-        } else if (dna[i] === "T") {
-            complimentArr.push('A')
-        } else if (dna[i] === "G") {
-            complimentArr.push("C");
-        }
-    }
-    let complimentArr2 = complimentArr.join('');
-    return complimentArr2;
-}
+// TODO:
+// Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in
+// descending order. Essentially, rearrange the digits to create the highest possible number.
+// Example input/outputs:
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+
+// const descendingOrder = (n) => {
+//     let inputNum = n;
+// // create empty array
+//     let arr = [];
+//     // convert number to string
+//     let inputAsString = inputNum.toString();
+//     // split string to array as individual chars
+//     let splitStr = inputAsString.split('');
+//     // create temp variable for last element and to compare to current
+//     let highestNumber = splitStr[0];
+//     for (let i = 1; i < splitStr.length; i++) {
+//         console.log(splitStr[i] < highestNumber);
+//     }
+//
+// }
+//
+// descendingOrder(42145);
+
+// TODO: Given a year, return the century it is in. The first century spans from the year 1 up to and including the
+//  year 100, the second - from the year 101 up to and including the year 200, etc.
+// Example:
+// For year = 1905, the output should be
+// solution(year) = 20;
+// For year = 1700, the output should be
+// solution(year) = 17.
+// SOLUTION:
+// const Solution = (year) => {
+//     let stringYear = year.toString();
+//     let century;
+//     switch (true) {
+//         case stringYear >= 1 && stringYear <=100:
+//             century = 1;
+//             break
+//         case stringYear.length < 4:
+//             century = parseInt(stringYear[0]) + 1;
+//             break
+//         default:
+//             century = parseInt(stringYear[0] + stringYear[1]) + 1;
+//             return century;
+//     }
+//     return century;
+// }
+
+// console.log(Solution(2000));
+
+
+
+
+
 
 
