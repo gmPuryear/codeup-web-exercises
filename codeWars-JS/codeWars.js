@@ -271,6 +271,27 @@
 // console.log(solution([6, 3])); // expected: 2 more needed
 // console.log(solution([5, 4, 6])); // expected: 0 more needed
 
+//TODO: Let's say a triple is (a,b,c) is a zigzag if a < b > c or a > b < c. Given an array of integers "numbers", your task
+// is to check all teh triples of its consecutive elements for being a zigzag. More formally, your task is to construct
+// an array of length numbers.length - 2, where the ith elemetn of the output array equals 1 if it follows pattern
+// SOLUTION:
+// const solution = (numbers) => {
+//     let solutionArr = [];
+//
+//     for (let i = 1; i < numbers.length - 1; i++) {
+//         let previousElement = numbers[i - 1];
+//         let currentElement = numbers[i];
+//         let nextElement = numbers[i + 1];
+//         if ((previousElement < currentElement && currentElement > nextElement) || (previousElement > currentElement && currentElement < nextElement)) {
+//             solutionArr.push(1);
+//         } else {
+//             solutionArr.push(0);
+//         }
+//     }
+//     return solutionArr;
+// }
+// console.log(solution([1, 2, 3, 4]));
+
 
 
 
