@@ -275,6 +275,7 @@
 // is to check all teh triples of its consecutive elements for being a zigzag. More formally, your task is to construct
 // an array of length numbers.length - 2, where the ith elemetn of the output array equals 1 if it follows pattern
 // SOLUTION:
+
 // const solution = (numbers) => {
 //     let solutionArr = [];
 //
@@ -292,9 +293,54 @@
 // }
 // console.log(solution([1, 2, 3, 4]));
 
+// get rows:
+// let rws = matrix.length;
+// let cls = matrix[0].length;
+// let
 
+// let grades = [
+//     [12, 13, 32, 43, 42, 23, 60, 85],
+//     [12, 43, 21, 12, 43, 12, 45],
+//     [43, 12, 43, 12, 45, 12]
+// ]
+// for (let i = 0; i < grades.length; i++) {
+//     for (let j = 0; j < grades[i].length; j++) { // make sure you do grades[i].length so that if there is a jagged array
+//         // it will account for that
+//         console.log(grades[i][j]);
+//     }
+//     console.log('--------------') // separates each row with dashed line
+// }
 
-
+// TODO: Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing
+//  sequence by removing no more than one element from the array.
+// Note: sequence a0, a1, ..., an is considered to be a strictly increasing if a0 < a1 < ... < an. Sequence containing
+// only one element is also considered to be strictly increasing
+// Example: For sequence = [1, 3, 2, 1], the output should be
+// solution(sequence) = false.
+// There is no one element in this array that can be removed in order to get a strictly increasing sequence.
+// You can remove 3 from the array to get the strictly increasing sequence [1, 2]. Alternately, you can remove 2 to get
+// the strictly increasing sequence [1, 3]
+const solution = (sequence) => {
+    // 1. set counter to 0, which will keep track of number of times numbers decrease
+    // 2. if number before current is less than or equal to current, add one to counter
+    // 3. if the counter is more than 1, return false, else return true
+    let counter = 0;
+    for (let i = 1; i < sequence.length; i++) {
+        if (sequence[i-1] >= sequence[i]) {
+            counter ++;
+            if (counter > 1) {
+                return false;
+            }
+            if (sequence[i-2] >= sequence[i] && sequence[i-1] >= sequence[i+1]) {
+                return false;
+            }
+        }
+    }
+    return true
+}
+console.log(solution([1, 3, 2, 1]))
+console.log(solution([1, 3, 2]))
+console.log(solution([1, 2, 1, 2]))
 
 
 
