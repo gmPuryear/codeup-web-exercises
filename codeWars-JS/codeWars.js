@@ -15,15 +15,15 @@
 // }
 // console.log(SeriesSum(4));
 
-// You need to double the integer and return it.
+// TODO: You need to double the integer and return it.
 // function doubleInteger(i) {
 //     // i will be an integer. Double it and return it.
 //     return i *2 ;
 // }
 
-// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
-// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
-// Note: The function accepts an integer and returns an integer
+// TODO: Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+//  For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+//  Note: The function accepts an integer and returns an integer
 // let arr = [];
 // function squareDigits(num) {
 //     let numStr = num.toString();
@@ -39,8 +39,8 @@
 // }
 // console.log(squareDigits(9119));
 
-// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argumen
-// t (also a string).
+// TODO: Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument
+//  (also a string).
 // example: solution('abc', 'bc') // returns true
 // solution('abc', 'd') // returns false
 // function solution(str, ending){
@@ -59,11 +59,11 @@
 // }
 // console.log(solution('abc', 'bc'));
 
-// ----- PROBLEM -----
-// Usually when you buy something, you're asked whether your credit card number, phone number or answer to your
-// most secret question is still correct. However, since someone could look over your shoulder, you don't want that
-// shown on your screen. Instead, we mask it.
-// Your task is to write a function maskify, which changes all but the last four characters into '#'. -----
+// TODO: ----- PROBLEM -----
+//  Usually when you buy something, you're asked whether your credit card number, phone number or answer to your
+//  most secret question is still correct. However, since someone could look over your shoulder, you don't want that
+//  shown on your screen. Instead, we mask it.
+//  Your task is to write a function maskify, which changes all but the last four characters into '#'. -----
 // -----PLANNING -----
 // 1. Find type of CC 2. if number turn to string then split into arrau using split. 3. loop backwards starting at
 // length of array - 4 + 1, 4. change the present value of array to a #. 5. change back to string. 6. return new string.
@@ -91,9 +91,9 @@
 // }
 
 // ----- PROBLEM -----
-// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side
-// of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty
-// or there is no DNA at all (again, except for Haskell).
+// TODO: In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side
+//  of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty
+//  or there is no DNA at all (again, except for Haskell).
 // ----- PLANNING -----
 // 1. Create empty array to hold complement of the input.
 // 2. Iterate over input
@@ -390,3 +390,33 @@
 // }
 //
 // console.log(solution(["aba", "aa", "ad", "vcd", "aba"]));
+
+// TODO: Given two strings, find the number of common characters between them.
+//  For s1 = "aabcc" and s2 = "adcaa", the output should be
+//  solution(s1, s2) = 3.
+//  Strings have 3 common characters - 2 "a"s and 1 "c".
+// 1. loop through one string and then loop through other comparing first string character to second one
+// const solution = (s1, s2) => {
+//     let sum = 0;
+//     let arrS1 = s1.split('');
+//     let y = s2;
+//
+//     while (arrS1.length) { // as soon as the length is equal to 0 (because 0 is falsey so we dont need arrS1.length > 0
+//         const x = arrS1.pop()
+//         if (y.includes(x)) { // if the x value is in the y (which is a copy of s2 string to manipulate,
+//             sum++ // add one to sum
+//             y = y.replace(x, ' ') // replace the x value in y with a space so it takes it out. It just gets rid of it
+//         }
+//     }
+//     return sum;
+// }
+// console.log(solution("aabcc", "adcaa"));
+// //** ALTERNATE ANSWER FOR LAST PROBLEM **
+// function solution(s1, s2) {
+//     for (var i = 0; i < s1.length; i++) {
+//         s2 = s2.replace(s1[i], "!");
+//         console.log(s2)
+//     }
+//     return s2.replace(/[^!]/g, "").length;
+// }
+
