@@ -320,30 +320,55 @@
 // There is no one element in this array that can be removed in order to get a strictly increasing sequence.
 // You can remove 3 from the array to get the strictly increasing sequence [1, 2]. Alternately, you can remove 2 to get
 // the strictly increasing sequence [1, 3]
-const solution = (sequence) => {
-    // 1. set counter to 0, which will keep track of number of times numbers decrease
-    // 2. if number before current is less than or equal to current, add one to counter
-    // 3. if the counter is more than 1, return false, else return true
-    let counter = 0;
-    for (let i = 1; i < sequence.length; i++) {
-        if (sequence[i-1] >= sequence[i]) {
-            counter ++;
-            if (counter > 1) {
-                return false;
-            }
-            if (sequence[i-2] >= sequence[i] && sequence[i-1] >= sequence[i+1]) {
-                return false;
-            }
-        }
-    }
-    return true
-}
-console.log(solution([1, 3, 2, 1]))
-console.log(solution([1, 3, 2]))
-console.log(solution([1, 2, 1, 2]))
+// const solution = (sequence) => {
+//     // 1. set counter to 0, which will keep track of number of times numbers decrease
+//     // 2. if number before current is less than or equal to current, add one to counter
+//     // 3. if the counter is more than 1, return false, else return true
+//     let counter = 0;
+//     for (let i = 1; i < sequence.length; i++) {
+//         if (sequence[i-1] >= sequence[i]) {
+//             counter ++;
+//             if (counter > 1) {
+//                 return false;
+//             }
+//             if (sequence[i-2] >= sequence[i] && sequence[i-1] >= sequence[i+1]) {
+//                 return false;
+//             }
+//         }
+//     }
+//     return true
+// }
+// console.log(solution([1, 3, 2, 1]))
+// console.log(solution([1, 3, 2]))
+// console.log(solution([1, 2, 1, 2]))
 
-
-
+// //TODO: After becoming famous, the CodeBots decided to move into a new building together. Each of the rooms has a
+// // different cost, and some of them are free, but there's a rumour that all the free rooms are haunted! Since the
+// // CodeBots are quite superstitious, they refuse to stay in any of the free rooms, or any of the rooms below any
+// // of the free rooms. Given matrix, a rectangular matrix of integers, where each value represents the cost of the room,
+// // your task is to return the total sum of all rooms that are suitable for the CodeBots (ie: add up all the values that
+// // don't appear below a 0).
+// // 1. loop through matrix by columns, loop through the each element.
+// // 2. Check for free rooms
+// // 3. find room under it and change to free
+// // 4. add up total
+// const solution = (matrix) => {
+//     let total = 0;
+//     for (let i = 0; i < matrix[0].length; i++) { // loops through each column
+//         for (let j = 0; j < matrix.length; j++) { // loop through each row
+//             if (matrix[j][i] === 0) {
+//                 break;
+//             }
+//             // console.log(matrix[j][i])
+//             total += matrix[j][i];
+//         }
+//     }
+//     return total;
+// }
+// console.log(solution([
+//     [0, 1, 1, 2],
+//     [0, 5, 0, 0],
+//     [2, 0, 3, 3]]))
 
 
 
