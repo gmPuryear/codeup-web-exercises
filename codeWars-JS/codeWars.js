@@ -420,3 +420,32 @@
 //     return s2.replace(/[^!]/g, "").length;
 // }
 
+//TODO: Ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum
+// of the first half of the digits is equal to the sum of the second half.
+// Given a ticket number n, determine if it's lucky or not.
+// EXAMPLE:
+// For n = 1230, the output should be
+// solution(n) = true;
+// For n = 239017, the output should be
+// solution(n) = false.
+
+const solution = (n) => {
+    // 1. split n into array
+    // 2. first half starts at 0 and ends at length of n/2 - 1
+    // 3. second half starts at first half + 1
+    let nToString = n.toString();
+    let splitNString = nToString.split('');
+    let firstHalf = splitNString.length / 2;
+    let secondHalf = (splitNString.length / 2);
+    let firstHalfSum = 0;
+    let secondHalfSum = 0;
+    for (let i = 0; i < firstHalf; i++) {
+        firstHalfSum += parseInt(splitNString[i]);
+    }
+    for (let j = secondHalf; j < splitNString.length; j++) {
+        secondHalfSum += parseInt(splitNString[j]);
+    }
+    return (firstHalfSum === secondHalfSum)
+}
+
+console.log(solution(1230))
