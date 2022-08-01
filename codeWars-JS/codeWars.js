@@ -370,5 +370,23 @@
 //     [0, 5, 0, 0],
 //     [2, 0, 3, 3]]))
 
+// TODO: Given an array of strings, return another array containing all of its longest strings.
+//  Example:
+//  For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
+//  solution(inputArray) = ["aba", "vcd", "aba"].
 
-
+// const solution = (inputArray) => {
+//     let longestStringsArr = [];
+//     inputArray.sort((a, b) => {
+//         return a.length - b.length;
+//     });
+//     let longestString = inputArray[inputArray.length - 1].length;
+//     for (let i = 0; i < inputArray.length; i++) {
+//         if (inputArray[i].length === longestString) {
+//             longestStringsArr.push(inputArray[i]);
+//         }
+//     }
+//     return longestStringsArr;
+// }
+//
+// console.log(solution(["aba", "aa", "ad", "vcd", "aba"]));
