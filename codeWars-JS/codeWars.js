@@ -473,3 +473,66 @@
 //     return a.map(value => (value === -1) ? -1 : sortedPeople.shift())
 // }
 // console.log(solution([-1, 150, 190, 170, -1, -1, 160, 180]));
+
+//TODO: Write a function that reverses characters in (possibly nested) parentheses in the input string.
+// Input strings will always be well-formed with matching ()s.
+// Example:
+// For inputString = "(bar)", the output should be
+// solution(inputString) = "rab";
+// For inputString = "foo(bar)baz", the output should be
+// solution(inputString) = "foorabbaz";
+// For inputString = "foo(bar)baz(blim)", the output should be
+// solution(inputString) = "foorabbazmilb";
+// For inputString = "foo(bar(baz))blim", the output should be
+// solution(inputString) = "foobazrabblim".
+// Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
+
+// const solution = (inputString) => {
+//     while (inputString.includes('(')) { // while the string has an open bracket, keep doing the following:
+//         let lastPar = inputString.indexOf(')'); // find position of closing bracket
+//         let firstPar = inputString.lastIndexOf('(', lastPar); // find position of opening bracket.
+//         let slicedBetweenPars = inputString.slice(firstPar + 1, lastPar); // slicing string between the brackets
+//         let reversedSlicedString = slicedBetweenPars.split('').reverse().join(''); // splitting, reversing, then joining the string between brackets
+//         inputString = inputString.slice(0, firstPar) + reversedSlicedString + inputString.slice(lastPar + 1); // putting back together the string with no brackets
+//     }
+//     return inputString;
+// }
+//
+// // console.log(solution("(bar)")) // expected: "rab"
+// // console.log(solution("foo(bar)baz")); // expected: "foorabbaz"
+// console.log(solution("foo(bar)baz(blim)")) // expected "foorabbazmilb"
+// // console.log(solution("foorabbaz")); // expected: "foorabbaz"
+// // console.log(solution("foo(bar(baz))blim")); // expected: "foorabbazmilb"
+
+//TODO: Several people are standing in a row and need to be divided into two teams. The first person goes into team 1,
+// the second goes into team 2, the third goes into team 1 again, the fourth into team 2, and so on.
+// You are given an array of positive integers - the weights of the people. Return an array of two integers, where the
+// first element is the total weight of team 1, and the second element is the total weight of team 2 after the division
+// is complete.
+// Example:
+// For a = [50, 60, 60, 45, 70], the output should be
+// solution(a) = [180, 105].
+const solution = (a) => {
+    // 1. make team one and make team two
+    // 2. loop through people array and every odd, they go in team 1, even they go in team 2
+    // 3. find total weight for each group and push each into new array, use reduce to get total of each
+    let totalWeightArray = []; // array that will be returned at end with both team's total weights
+    let teamTwo = a.filter((person, index) => { // creates team two as an array and puts each even element
+        if (index % 2 !== 0) {
+            return person;
+        }
+    })
+    let teamOne = a.filter((person, index) => { // creates twam one as an array and puts each odd element into it
+        if (index % 2 === 0) {
+            return person;
+        }
+    })
+    // adds up all weights of team two
+    let teamTwoTotal = teamTwo.reduce((previousValue, currentValue) => { return previousValue + currentValue}, 0);
+    // adds up all weights of team one
+    let teamOneTotal = teamOne.reduce((previousValue, currentValue) => { return previousValue + currentValue}, 0);
+    totalWeightArray.push(teamOneTotal, teamTwoTotal); // pushes both teams total weights into an array
+    return totalWeightArray;
+}
+
+console.log(solution([50, 60, 60, 45, 70]))
