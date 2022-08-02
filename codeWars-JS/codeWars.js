@@ -429,23 +429,47 @@
 // For n = 239017, the output should be
 // solution(n) = false.
 
-const solution = (n) => {
-    // 1. split n into array
-    // 2. first half starts at 0 and ends at length of n/2 - 1
-    // 3. second half starts at first half + 1
-    let nToString = n.toString();
-    let splitNString = nToString.split('');
-    let firstHalf = splitNString.length / 2;
-    let secondHalf = (splitNString.length / 2);
-    let firstHalfSum = 0;
-    let secondHalfSum = 0;
-    for (let i = 0; i < firstHalf; i++) {
-        firstHalfSum += parseInt(splitNString[i]);
-    }
-    for (let j = secondHalf; j < splitNString.length; j++) {
-        secondHalfSum += parseInt(splitNString[j]);
-    }
-    return (firstHalfSum === secondHalfSum)
-}
+// const solution = (n) => {
+//     // 1. split n into array
+//     // 2. first half starts at 0 and ends at length of n/2 - 1
+//     // 3. second half starts at first half + 1
+//     let nToString = n.toString();
+//     let splitNString = nToString.split('');
+//     let firstHalf = splitNString.length / 2;
+//     let secondHalf = (splitNString.length / 2);
+//     let firstHalfSum = 0;
+//     let secondHalfSum = 0;
+//     for (let i = 0; i < firstHalf; i++) {
+//         firstHalfSum += parseInt(splitNString[i]);
+//     }
+//     for (let j = secondHalf; j < splitNString.length; j++) {
+//         secondHalfSum += parseInt(splitNString[j]);
+//     }
+//     return (firstHalfSum === secondHalfSum)
+// }
+//
+// console.log(solution(1230))
 
-console.log(solution(1230))
+//TODO: Some people are standing in a row in a park. There are trees between them which cannot be moved.
+// Your task is to rearrange the people by their heights in a non-descending order without moving the trees.
+// People can be very tall!
+// Example:
+// For a = [-1, 150, 190, 170, -1, -1, 160, 180], the output should be
+// solution(a) = [-1, 150, 160, 170, -1, -1, 180, 190].
+
+// const solution = (a) => {
+//     const sortedPeople = a.filter(element => element !== -1).sort((a,b)=> a-b) // take out all trees in the array
+//     let i = -1;
+//     return a.map(value => {
+//         if (value === -1) return -1
+//         i++
+//         return a = sortedPeople[i];
+//     })
+// }
+
+// ** Alternate Solution **
+// const solution = (a) => {
+//     const sortedPeople = a.filter(element => element !== -1).sort((a,b) => a-b)
+//     return a.map(value => (value === -1) ? -1 : sortedPeople.shift())
+// }
+// console.log(solution([-1, 150, 190, 170, -1, -1, 160, 180]));
