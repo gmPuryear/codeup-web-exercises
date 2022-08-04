@@ -512,27 +512,54 @@
 // Example:
 // For a = [50, 60, 60, 45, 70], the output should be
 // solution(a) = [180, 105].
-const solution = (a) => {
-    // 1. make team one and make team two
-    // 2. loop through people array and every odd, they go in team 1, even they go in team 2
-    // 3. find total weight for each group and push each into new array, use reduce to get total of each
-    let totalWeightArray = []; // array that will be returned at end with both team's total weights
-    let teamTwo = a.filter((person, index) => { // creates team two as an array and puts each even element
-        if (index % 2 !== 0) {
-            return person;
-        }
-    })
-    let teamOne = a.filter((person, index) => { // creates twam one as an array and puts each odd element into it
-        if (index % 2 === 0) {
-            return person;
-        }
-    })
-    // adds up all weights of team two
-    let teamTwoTotal = teamTwo.reduce((previousValue, currentValue) => { return previousValue + currentValue}, 0);
-    // adds up all weights of team one
-    let teamOneTotal = teamOne.reduce((previousValue, currentValue) => { return previousValue + currentValue}, 0);
-    totalWeightArray.push(teamOneTotal, teamTwoTotal); // pushes both teams total weights into an array
-    return totalWeightArray;
+
+// const solution = (a) => {
+//     // 1. make team one and make team two
+//     // 2. loop through people array and every odd, they go in team 1, even they go in team 2
+//     // 3. find total weight for each group and push each into new array, use reduce to get total of each
+//     let totalWeightArray = []; // array that will be returned at end with both team's total weights
+//     let teamTwo = a.filter((person, index) => { // creates team two as an array and puts each even element
+//         if (index % 2 !== 0) {
+//             return person;
+//         }
+//     })
+//     let teamOne = a.filter((person, index) => { // creates team one as an array and puts each odd element into it
+//         if (index % 2 === 0) {
+//             return person;
+//         }
+//     })
+//     // adds up all weights of team two
+//     let teamTwoTotal = teamTwo.reduce((previousValue, currentValue) => { return previousValue + currentValue}, 0);
+//     // adds up all weights of team one
+//     let teamOneTotal = teamOne.reduce((previousValue, currentValue) => { return previousValue + currentValue}, 0);
+//     totalWeightArray.push(teamOneTotal, teamTwoTotal); // pushes both teams total weights into an array
+//     return totalWeightArray;
+// }
+// console.log(solution([50, 60, 60, 45, 70]))
+
+//TODO: Given a rectangular matrix of characters, add a border of asterisks(*) to it.
+// Example:
+// For
+// picture = ["abc",
+//     "ded"]
+// the output should be:
+// solution(picture) = ["*****",
+//     "*abc*",
+//     "*ded*",
+//     "*****"]
+//
+const solution = (picture) => {
+    let ast = "*";
+    const picWithAst = picture.map(element => '*' + element + '*')
+    let border = [];
+    for (let i = 0; i < picWithAst[0].length; i++) {
+        border.push('*');
+    }
+    border = border.join('');
+    picWithAst.push(border);
+    picWithAst.unshift(border);
+    return picWithAst;
 }
 
-console.log(solution([50, 60, 60, 45, 70]))
+console.log(solution(["abc",
+    "ded"]))
